@@ -8,7 +8,7 @@ const port = 3001;
 app.use(cors());
 app.use(bodyParser.json());
 
-const emails = JSON.parse(fs.readFileSync('emails.JSON'));
+const emails = JSON.parse(fs.readFileSync('emails.json'));
 
 app.get('/emails', (req, res) => res.json(emails));
 app.get('/emails/:id', (req, res) => {
